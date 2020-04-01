@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+	<title>Phpsitem.com</title>
+	
+	<style>
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body{
+font-family: 'Quicksand', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #212529;
+	background-color: #f2f2f2;
+}
+a:hover{
+text-decoration:none;
+}
+
+img{
+border-radius: 15px;
+}
+
+ a{
+    color: #34495e;
+}  
+
+ 
+a:hover {
+    color: #2980b9;
+}
+
+
+.navbar {
+  -webkit-box-shadow: 3px 3px 7px 0px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 7px 0px #ccc;  /* Firefox 3.5 - 3.6 */
+
+  box-shadow:   2px 2px 10px 0px #ddd;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.post .post-image{
+ border-radius: 15px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+ .post{
+ position:relative;
+ }
+  .post-item{
+ margin-bottom:25px;
+ padding:15px;
+
+  //box-shadow:   0px 0px 10px 5px #ddd;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+ background:#fff;
+ }
+ 
+ .main{
+ margin-top:40px;
+ }
+  .post .post-title>a:hover{
+ color:#2980b9;
+ 
+ }  
+ .post .post-title{
+ font-size:40px;
+ font-weight:bold;
+ 
+ } .post .post-title a{
+	color: #0d0d0d;
+ 
+ }
+ .post .post-image-not{
+	background:#2980b9;
+	width:120px;
+	height:120px;
+ border-radius: 15px;
+ } 
+ .post .post-image-not p{
+	font-size:55px;
+	color:#fff;
+	    position: relative;
+    top: 50%;
+    transform: translateY(-40%);
+	font-weight:bold;
+ } .post .post-button{
+	float:right;
+ }
+ 
+ 
+ .navbar-light .navbar-nav .nav-link {
+    color: #34495e;
+}  
+
+.navbar-light  
+ {
+    font-size:20px;
+} 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #2980b9;
+}
+.navbar-light .navbar-brand {
+    font-size:25px;
+	color:#2980b9;
+	font-weight:bold;
+	 
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #000;
+}
+
+.navbar-custom{
+    background-color:#fff
+}
+
+
+
+.masthead {
+  margin-top:2px; 
+  min-height: 300px;
+  background-image: url('https://img3.akspic.ru/image/108995-beton-tekstura-material-1920x1080.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.masthead-body{
+
+padding-top:40px;
+padding-bottom:40px;
+}
+
+.featurette{
+margin-top:40px;
+padding:60px;
+background:#fff;
+}
+
+.page-footer{
+border-top:1px solid #d9d9d9;
+padding:25px;
+padding-bottom:0;
+margin-top:50px;
+}
+
+.footer-copyright{
+border-top:1px solid #d9d9d9;
+padding:15px;
+margin-top:15px;
+}
+.footer-copyright a{
+color:#000;
+}
+
+.gallery{
+padding:40px;
+
+margin-top:40px;
+background:#fff;
+}
+.gallery-title{
+padding-bottom:35px;
+
+}
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.content-item {
+    padding:30px 0;
+	background-color:#FFFFFF;
+}
+
+.content-item.grey {
+	background-color:#F0F0F0;
+	padding:50px 0;
+	height:100%;
+}
+
+.content-item h2 {
+	font-weight:700;
+	font-size:35px;
+	line-height:45px;
+	text-transform:uppercase;
+	margin:20px 0;
+}
+
+.content-item h3 {
+	font-weight:400;
+	font-size:20px;
+	color:#555555;
+	margin:10px 0 15px;
+	padding:0;
+}
+
+.content-headline {
+	height:1px;
+	text-align:center;
+	margin:20px 0 70px;
+}
+
+.content-headline h2 {
+	background-color:#FFFFFF;
+	display:inline-block;
+	margin:-20px auto 0;
+	padding:0 20px;
+}
+
+.grey .content-headline h2 {
+	background-color:#F0F0F0;
+}
+
+.content-headline h3 {
+	font-size:14px;
+	color:#AAAAAA;
+	display:block;
+}
+
+
+#comments {
+    //box-shadow: 0 -1px 6px 1px rgba(0,0,0,0.1);
+	background-color:#FFFFFF;
+}
+
+#comments form {
+	margin-bottom:30px;
+}
+
+#comments .btn {
+	margin-top:7px;
+}
+
+#comments form fieldset {
+	clear:both;
+}
+
+#comments form textarea {
+	height:100px;
+}
+
+#comments .media {
+	border-top:1px dashed #DDDDDD;
+	padding:20px 0;
+	margin:0;
+}
+
+#comments .media > .pull-left {
+    margin-right:20px;
+}
+
+#comments .media img {
+	max-width:100px;
+}
+
+#comments .media h4 {
+	margin:0 0 10px;
+}
+
+#comments .media h4 span {
+	font-size:14px;
+	float:right;
+	color:#999999;
+}
+
+#comments .media p {
+	margin-bottom:15px;
+	text-align:justify;
+}
+
+#comments .media-detail {
+	margin:0;
+}
+
+#comments .media-detail li {
+	color:#AAAAAA;
+	font-size:12px;
+	padding-right: 10px;
+	font-weight:600;
+}
+
+#comments .media-detail a:hover {
+	text-decoration:underline;
+}
+
+#comments .media-detail li:last-child {
+	padding-right:0;
+}
+
+#comments .media-detail li i {
+	color:#666666;
+	font-size:15px;
+	margin-right:10px;
+}
+
+.comments-title{
+padding-bottom:25px;
+}
+	</style>
+  </head>
+  <body>
+ 
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom">
+  <div class="container-xl">
+    <a class="navbar-brand" href="#"><img src="https://i.ibb.co/Csrf4J1/unnamed.png" width="170"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample07XL">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+  
+      </ul>
+ <ul class="navbar-nav ml-auto" style="margin-right:25px">
+ 
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Özellikler </a>
+        </li>        
+		<li class="nav-item ">
+          <a class="nav-link" href="#">Ekran Görüntüsü </a>
+        </li>        
+		<li class="nav-item ">
+          <a class="nav-link" href="#">Yorumlar </a>
+        </li>        		
+		<li class="nav-item ">
+          <a class="nav-link" href="#">Teslimat </a>
+        </li>        
+		<li class="nav-item ">
+          <a class="nav-link" href="#">İletişim </a>
+        </li>
+ 
+  </ul>
+<button type="button" class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+</nav>  
+
+<!-- Full Page Image Header with Vertically Centered Content -->
+<header class="masthead">
+  <div class="container h-100">
+  <div class="masthead-body">
+    <div class="row h-100 align-items-center">
+		<div class="col-md-5">
+      <div class="masthead-image">
+	  <img   class="img-fluid" src="https://objevit.cz/img/2017/09/https-_s3-us-west-1.amazonaws.com_comingsoon-gogo_arrowgif-face.gif">
+	  </div>
+		</div>	
+		<div class="col-md-6">
+				<div class="masthead-text text-left">
+					<h1 class="font-weight-bold text-dark"> Blood Pressure Smartwatch Watch Waterproof Heart Rate </h1>
+					<p class="lead text-dark">2020 Smart Watch Men Women Blood Pressure Smartwatch Watch Waterproof Heart Rate Tracker Sport Clock Watch Smart For Android IOS</p>
+				<ul class = "list-unstyled">
+								<li>Heart Rate Monitor</li>
+								<li>Information Push Reminder (SMS/QQ/WeChat/Skype/Facebook/Twitter/Line/WhatsApp)</li>
+								<li>Auto Light-up Screen</li>
+							</ul>
+							<button type="button" class="btn btn-outline-dark btn-lg">Hemen Şimdi Satın Al</button>
+				</div>
+		</div>
+	 
+    </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Page Content -->
+    <div class="container">
+
+
+<div class="main">
+<div class="home-list col-md-12 align-items-center text-center">
+ <h1 class="font-weight-bold text-dark">Blood Pressure Smartwatch Watch </h1>
+		<p>Kısacası - kolaylık sağlamak için. Katılıyorum, bir akıllı telefon almak her zaman uygun değildir. Diyelim ki bir aramayı cevaplamanız veya bir SMS mesajı okumanız gerekiyor.</p> 
+		<p>Akıllı telefonun ceket cebinde olması iyidir. Ancak birçok modern cihaz artık cebinize sığmıyor; çantalarda veya sırt çantalarında taşınıyorlar. Her zaman, "tırmanmak" telefon uygun değildir.</p> 
+		<p>V8 akıllı saat her zaman elinizin altında. Tek dokunuşla aramayı cevapladınız.</p>
+		<p>Ve bu Smart Watch V8'in yeteneklerinin sadece küçük bir kısmı. Aşağıda kalanlar hakkında konuşacağız.</p>
+		   
+	  <img  class="img-fluid" src="https://v8-smartwatch.ru/img/smart-chasy-v8-na-muzhskoj-ruke.jpg">
+
+      <!-- /.row -->
+</div>
+
+
+
+	
+	
+	
+</div>
+  
+
+
+
+    </div>
+    <!-- /.container -->
+
+<div class="container-fluit">
+<div class="featurette">
+<div class="row ">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+	  <img  class="img-fluid" src="https://photo.burst.zone/5c6a9b6f29e6430c3f4fc05f.small.jpg">
+      </div>
+    </div>
+    </div>
+	
+<div class="featurette">
+<div class="row ">
+
+      <div class="col-md-5">
+	  <img  class="img-fluid" src="https://opt-opt.ru/image/cache/catalog/tovari/2916.970-500x500.jpg">
+      </div>
+	        <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+    </div>
+    </div>	
+	
+    </div><!-- /.containerfluit -->
+
+<section class="content-item" id="comments">
+    <div class="container">         
+    	<div class="row">
+            <div class="col-sm-12">   
+                
+                 <h1 class="font-weight-bold text-dark text-center comments-title">Blood Pressure Smartwatch Watch Yorumlar</h1>
+
+                
+                <!-- COMMENT 1 - START -->
+                <div class="media">
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">John Doe</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                           
+                        </ul>
+                      
+                    </div>
+                </div>
+                <!-- COMMENT 1 - END -->
+                
+                <!-- COMMENT 2 - START -->
+                <div class="media">
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt=""></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">John Doe</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                         </ul>
+                        
+                    </div>
+                </div>
+                <!-- COMMENT 2 - END -->
+                
+                <!-- COMMENT 3 - START -->
+                <div class="media">
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">John Doe</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                         </ul>
+                     
+                    </div>
+                </div>
+                <!-- COMMENT 3 - END -->
+                
+                <!-- COMMENT 4 - START -->
+                <div class="media">
+                    <a class="pull-left" href="#"><img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt=""></a>
+                    <div class="media-body">
+                        <h4 class="media-heading">John Doe</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <ul class="list-unstyled list-inline media-detail pull-left">
+                            <li><i class="fa fa-calendar"></i>27/02/2014</li>
+                         </ul>
+                       
+                    </div>
+                </div>
+                <!-- COMMENT 4 - END -->
+            
+            </div>
+        </div>
+    </div>
+</section>
+<div class="gallery">
+
+<div class="container-fluit">
+ <h1 class="font-weight-bold text-dark text-center gallery-title">Blood Pressure Smartwatch Watch Galeri</h1>
+
+	<div class="row">
+		<div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Test1"
+                   data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                         alt="Another alt text">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="image-gallery-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                        </button>
+
+                        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Footer Content</h5>
+        <p>Here you can use rows and columns to organize your footer content.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0  ">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Menü</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Özellikler</a>
+          </li>
+          <li>
+            <a href="#!">Ekran Görüntüleri</a>
+          </li>
+          <li>
+            <a href="#!">Ürün Videoları</a>
+          </li>
+          <li>
+            <a href="#!">Kullanıcı Yorumları</a>
+          </li>
+          <li>
+            <a href="#!">İade</a>
+          </li>
+		  
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0  ">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Bilgi</h5>
+
+        <ul class="list-unstyled">
+
+          <li>
+            <a href="#!">İletişim</a>
+          </li>
+          <li>
+            <a href="#!">Hakkımızda</a>
+          </li>
+          <li>
+            <a href="#!">Satın Al</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center  ">© 2020 Copyright
+<p><a href="http://www.phpsitem.com"  target="_blank" title="PHP Yazılımlar, Hazır Web Sitesi Paketleri, SEO, E-Ticaret, Haber Sistemleri, Otomasyon Sistemleri, Proje Yönetimi">Uygulama <i class="fas fa-heart text-danger"></i> phpsitem.com </a> 
+</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+  
+ <script>
+let modalId = $('#image-gallery');
+
+$(document)
+  .ready(function () {
+
+    loadGallery(true, 'a.thumbnail');
+
+    //This function disables buttons when needed
+    function disableButtons(counter_max, counter_current) {
+      $('#show-previous-image, #show-next-image')
+        .show();
+      if (counter_max === counter_current) {
+        $('#show-next-image')
+          .hide();
+      } else if (counter_current === 1) {
+        $('#show-previous-image')
+          .hide();
+      }
+    }
+
+    /**
+     *
+     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+     * @param setClickAttr  Sets the attribute for the click handler.
+     */
+
+    function loadGallery(setIDs, setClickAttr) {
+      let current_image,
+        selector,
+        counter = 0;
+
+      $('#show-next-image, #show-previous-image')
+        .click(function () {
+          if ($(this)
+            .attr('id') === 'show-previous-image') {
+            current_image--;
+          } else {
+            current_image++;
+          }
+
+          selector = $('[data-image-id="' + current_image + '"]');
+          updateGallery(selector);
+        });
+
+      function updateGallery(selector) {
+        let $sel = selector;
+        current_image = $sel.data('image-id');
+        $('#image-gallery-title')
+          .text($sel.data('title'));
+        $('#image-gallery-image')
+          .attr('src', $sel.data('image'));
+        disableButtons(counter, $sel.data('image-id'));
+      }
+
+      if (setIDs == true) {
+        $('[data-image-id]')
+          .each(function () {
+            counter++;
+            $(this)
+              .attr('data-image-id', counter);
+          });
+      }
+      $(setClickAttr)
+        .on('click', function () {
+          updateGallery($(this));
+        });
+    }
+  });
+
+// build key actions
+$(document)
+  .keydown(function (e) {
+    switch (e.which) {
+      case 37: // left
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+          $('#show-previous-image')
+            .click();
+        }
+        break;
+
+      case 39: // right
+        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+          $('#show-next-image')
+            .click();
+        }
+        break;
+
+      default:
+        return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+  });
+
+</script> 
+  </body>
+</html>
