@@ -1,0 +1,64 @@
+.slider-pt {
+    padding-top: 5px;
+}
+
+.slider-img{
+	margin-top: 105px;
+	 
+}
+
+#header-sticky{
+	 
+}
+.header-btn .btn{
+	/*background: #ffc107;*/
+text-transform: none;
+}
+
+.logo img {
+    width: 220px;
+     padding-right: 15px;
+}
+.logo h1 {
+	font-size: 43px;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	color: #ffffff;
+}
+.logo h1:hover {
+ 
+	color: #000;
+}
+.menu-area ul li a:hover{
+	color: #000;
+	 
+}
+
+.fw-link ul li a:hover{
+	color: #0052cf;
+}
+.fc-info a{
+color: #fff;;
+}
+.fc-info a:hover{
+	color: #0052cf;
+}
+.footer-widget .logo h1{
+	font-size: 50px;
+}
+.footer-widget .logo h1:hover{
+	color: #0052cf;
+}
+.menu-area ul li a{
+	/*font-size: 18px;*/
+}
+.service-list li{
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.menu-area ul li {
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+}
